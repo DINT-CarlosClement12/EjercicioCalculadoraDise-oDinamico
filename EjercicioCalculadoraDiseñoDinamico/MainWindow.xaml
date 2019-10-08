@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:EjercicioCalculadoraDiseñoDinamico"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid x:Name="MainGrid">
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -20,6 +20,11 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
+        <Border BorderThickness="1" BorderBrush="Black" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
+            <Viewbox HorizontalAlignment="Right">
+                <TextBlock x:Name="resultTextBlock" Text="" Grid.Column="2"></TextBlock>
+            </Viewbox>
+        </Border>
         
         <Button x:Name="ZeroButton" Grid.Row="4" Grid.Column="0" Tag="0" FontSize="22" Margin="5" Grid.ColumnSpan="3" Click="ButtonClick">
             <Viewbox>
